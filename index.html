@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Tickets</h1>
+        <form id="ticket-form">
+            <label>Nome:
+                <input type="text" id="name" required>
+            </label>
+        
+            <label>E-mail:
+                <input type="email" id="email" required>
+            </label>
+        
+            <label>Foto do Perfil:
+                <input type="file" id="photo" accept="image/*">
+            </label>
+        
+            <button type="submit">Gerar Ingresso</button>
+        </form>
+        
+        
+        <div id="ticket" class="hidden">
+            <h2>Aqui está o seu Ingresso!</h2>
+            <p id="ticket-name"></p>
+            <p id="ticket-email"></p>
+            <img id="ticket-photo" src="" alt="Foto do Perfil">
+        </div>
+        
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
