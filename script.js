@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
       leitor.readAsDataURL(arquivo);
     } else {
-      fotoIngresso.src = "https://via.placeholder.com/60";
+      fotoIngresso.src = "anexos/avatar.jpg";
       mostrarIngresso();
     }
   });
