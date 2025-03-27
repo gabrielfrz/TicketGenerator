@@ -4,52 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gerador de Ingressos</title>
+
+  <!-- Estilos e fontes -->
   <link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="anexos/logo.ico" />
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="anexos/logo.ico" />
 </head>
+
 <body>
   <main class="formulario-container">
     <div class="formulario-box">
       <h1>Gerador de Tickets</h1>
       <p class="titulo">Crie seu ingresso personalizado em segundos!</p>
-<p class="subtitulo">Envie uma foto, digite seus dados e gere seu ingresso automaticamente.</p>
+      <p class="subtitulo">Envie uma foto, digite seus dados e gere seu ingresso automaticamente.</p>
 
       <form id="formulario-ingresso">
+        <input type="file" id="foto" accept="image/*" hidden />
         <div class="caixa-upload" id="area-upload">
-          <input type="file" id="foto" accept="image/*" hidden />
-          <div id="texto-upload">Arraste e solte ou clique para enviar uma imagem</div>
+          <div id="texto-upload">Clique para selecionar uma imagem</div>
         </div>
-        
+
         <small class="dica-upload">Aceita JPG/PNG até 500KB</small>
 
         <input type="text" id="nome" placeholder="Nome completo" required />
         <input type="email" id="email" placeholder="Endereço de e-mail" required />
-
         <button type="submit">Gerar Meu Ingresso</button>
       </form>
 
       <div id="ingresso" class="escondido">
-        <p class="parabens">Pronto<span id="ingresso-nome"></span>!</p>
+        <p class="parabens">Pronto <span id="ingresso-nome"></span>!</p>
         <p class="texto-secundario">Seu ingresso foi gerado para o e-mail <span id="ingresso-email"></span>.</p>
 
         <div class="cartao-ingresso">
-            <img id="ingresso-foto" src="" alt="Avatar" />
-            <div>
-              <p class="titulo-ingresso">🎟️ Ingresso</p>
-              <p class="nome-ingresso" id="saida-nome-ingresso"></p>
-              <p class="email-ingresso" id="saida-email-ingresso"></p>
-            </div>
+          <img id="ingresso-foto" src="" alt="Avatar" />
+          <div>
+            <p class="titulo-ingresso">🎟️ Ingresso</p>
+            <p class="nome-ingresso" id="saida-nome-ingresso"></p>
+            <p class="email-ingresso" id="saida-email-ingresso"></p>
           </div>
         </div>
-        <div id="area-reset" class="escondido">
-            <button id="botao-resetar" class="botao-resetar">Gerar outro ingresso</button>
-          </div>
+      </div>
 
+      <div id="area-reset" class="escondido">
+        <button id="botao-resetar" class="botao-resetar">Gerar outro ingresso</button>
+      </div>
     </div>
   </main>
+
+  <!-- Script externo -->
   <script src="script.js"></script>
 </body>
 </html>
